@@ -3,6 +3,12 @@
         "guzzlehttp/guzzle": "~6.0",
 	"php": "^7.2.0"
     },
+    "autoload": {
+    	"files": [".env.php"],
+    	"classmap": [
+    		"Src"
+    	]
+    },
     "require-dev": {
         "heroku/heroku-buildpack-php": "^163.0"
     }
