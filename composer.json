@@ -1,7 +1,9 @@
 {
     "require": {
         "guzzlehttp/guzzle": "~6.0",
-	"php": "^7.2.0"
+	"php": "^7.2.0",
+        "graphaware/neo4j-php-client": "^4.0",
+        "psr/event-dispatcher": "^1.0"
     },
     "autoload": {
     	"files": [".env.php"],
