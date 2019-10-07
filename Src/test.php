@@ -4,31 +4,68 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 use GraphAware\Neo4j\Client\ClientBuilder;
 
-$name = 'Endscape';
+$neo4j = ClientBuilder::create()
+    ->addConnection('default', 'http://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7474') // port is optional
+    ->build();
 
+$name = 'Endscape';
 $client = new GuzzleHttp\Client();
 $res = $client->request('GET', 'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/'.$name, [
     'query' => 'api_key='.getenv('RIOT_API_TOKEN'),
 ]);
-echo $res->getStatusCode() . PHP_EOL;
-echo $res->getHeader('content-type')[0] . PHP_EOL;
-echo $res->getBody() . PHP_EOL . PHP_EOL;
 
 $json = json_decode($res->getBody());
-echo $json->profileIconId . PHP_EOL;
-echo $json->name . PHP_EOL;
-echo $json->puuid . PHP_EOL;
-echo $json->summonerLevel . PHP_EOL;
-echo $json->accountId . PHP_EOL;
-echo $json->id . PHP_EOL;
-echo $json->revisionDate . PHP_EOL;
-echo round($json->revisionDate/1000) . PHP_EOL . PHP_EOL;
+// echo round($json->revisionDate/1000) . PHP_EOL . PHP_EOL;
 
-$client = ClientBuilder::create()
-    ->addConnection('default', 'http://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7474') // Example for HTTP connection configuration (port is optional)
-    ->build();
+// Do we already have this player?
+$player = $neo4j->run('MATCH (n:Player) WHERE n.riot_accountId = {id} RETURN n', ['id' => $json->accountId]);
+$record = $player->getRecords();
 
-$result = $client->run('MATCH (n) RETURN COUNT(n) AS count');
+// If no player was found. 0 type juggles to false.
+if (count($record) == false) {
+	$query = 'Create (n:Player) SET n += {attributes}';
+} else {
+	$query = 'MATCH (n:Player) WHERE n.riot_accountId = {id} SET n += {attributes}';
+}
+
+// Set player attributes, including updated_at to keep track of when we last looked at this player
+$neo4j->run($query,
+[
+	'attributes' => [
+		'riot_profileIconId' => $json->profileIconId, 
+		'riot_name' => $json->name, 
+		'riot_id' => $json->id, 
+		'riot_accountId' => $json->accountId, 
+		'riot_puuid' => $json->puuid, 
+		'riot_summonerLevel' => $json->summonerLevel, 
+		'riot_revisionDate' => $json->revisionDate,
+		'updated_at' => time(),
+	],
+	'id' => $json->accountId
+]);
+
+// Get player's matchlist (Most recent 100 by default)
+$res = $client->request('GET', 'https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/'.$json->accountId, [
+    'query' => 'api_key='.getenv('RIOT_API_TOKEN'),
+]);
+
+$json = json_decode($res->getBody());
+// var_dump(array_keys(get_object_vars($json)));
+// var_dump(array_keys($json->matches));
+// var_dump(array_keys(get_object_vars($json->matches[0])));
+// echo $json->matches[0]->gameId .PHP_EOL;
+
+// Get match info about player's most recent match
+$res = $client->request('GET', 'https://euw1.api.riotgames.com/lol/match/v4/matches/'.$json->matches[0]->gameId, [
+    'query' => 'api_key='.getenv('RIOT_API_TOKEN'),
+]);
+
+$json = json_decode($res->getBody());
+var_dump(array_keys(get_object_vars($json)));
+// var_dump($json->participants);
+var_dump($json->participantIdentities);
+
+$result = $neo4j->run('MATCH (n) RETURN COUNT(n) AS count');
 $record = $result->getRecord();
 var_dump($record->get('count'));
 
