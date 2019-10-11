@@ -61,9 +61,13 @@ $res = $client->request('GET', 'https://euw1.api.riotgames.com/lol/match/v4/matc
 ]);
 
 $json = json_decode($res->getBody());
-var_dump(array_keys(get_object_vars($json)));
+// var_dump(array_keys(get_object_vars($json)));
 // var_dump($json->participants);
-var_dump($json->participantIdentities);
+// var_dump($json->participantIdentities);
+
+foreach ($json->participantIdentities as $key => $value) {
+	var_dump($value->player->accountId);
+}
 
 $result = $neo4j->run('MATCH (n) RETURN COUNT(n) AS count');
 $record = $result->getRecord();
