@@ -42,10 +42,15 @@ $json = json_decode($res->getBody());
 
 // TODO: Optimize
 foreach ($json->matches as $match) {
+	$queue = $match->queue;
+
+	// If match is not 5v5 Summoner's Rift (Normal or Ranked), or Clash, skip it
+	if (!in_array($queue, [400, 420, 430, 440, 700])) {
+		continue;
+	}
+
 	$gid = $match->gameId;
 	$cid = $match->champion;
-	$lane = $match->lane;
-	$season = $match->season;
 
 	// Does match node exist?
 	$match = $neo4j->run('MATCH (m:Match) WHERE m.riot_gameId = {gid} RETURN m', ['gid' => $gid])->getRecords();
@@ -65,7 +70,7 @@ foreach ($json->matches as $match) {
 	$relationship = $neo4j->run('MATCH (n:Player)-[r1:PLAYED_CHAMPION]->(:Champion)-[r2:IN_MATCH]->(m:Match) WHERE n.riot_accountId = {rid} AND m.riot_gameId = {gid} RETURN r1', ['rid' => $accountId, 'gid' => $gid])->getRecords();
 	if (count($relationship) == false) {
 		// Player isn't marked as match participant, mark them
-		$neo4j->run('MATCH (n:Player) WHERE n.riot_accountId = {rid} WITH n MATCH (m:Match) WHERE m.riot_gameId = {gid} WITH n, m MATCH (c:Champion) WHERE c.riot_id = {cid} WITH n, m, c MERGE (n)-[r1:PLAYED_CHAMPION]->(c)-[r2:IN_MATCH]->(m) SET r1.riot_lane = {lane}, r1.riot_season = {season}', ['rid' => $accountId, 'gid' => $gid, 'cid' => $cid, 'lane' => $lane, 'season' => $season]);
+		$neo4j->run('MATCH (n:Player) WHERE n.riot_accountId = {rid} WITH n MATCH (m:Match) WHERE m.riot_gameId = {gid} WITH n, m MATCH (c:Champion) WHERE c.riot_id = {cid} WITH n, m, c MERGE (n)-[r1:PLAYED_CHAMPION]->(c)-[r2:IN_MATCH]->(m)', ['rid' => $accountId, 'gid' => $gid, 'cid' => $cid]);
 	}
 }
 

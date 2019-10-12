@@ -1,0 +1,103 @@
+{
+	"Slayer": {
+		"Assassin": {
+			"Damage": {
+				"Priority": 5,
+				"DPS": 0,
+				"Burst": 5
+			},
+			"Toughness": {
+				"Priority": 1,
+				"Mitigation": 2,
+				"Sustain": 3
+			},
+			"Crowd Control": {
+				"Priority": 2,
+				"Soft": 4,
+				"Hard": 1
+			},
+			"Mobility": {
+				"Priority": 5,
+				"Engage": 3,
+				"Reposition": 2
+			},
+			"Utility": {
+				"Priority": 1,
+				"Defensive": 2,
+				"Offensive": 3
+			},
+		},
+		"Skirmisher": {
+			"Damage": {
+				"Priority": 5,
+				"DPS": 3,
+				"Burst": 2
+			},
+			"Toughness": {
+				"Priority": 3,
+				"Mitigation": 2,
+				"Sustain": 3
+			},
+			"Crowd Control": {
+				"Priority": 2,
+				"Soft": 1,
+				"Hard": 4
+			},
+			"Mobility": {
+				"Priority": 5,
+				"Engage": 1,
+				"Reposition": 4
+			},
+			"Utility": {
+				"Priority": 1,
+				"Defensive": 2,
+				"Offensive": 3
+			},
+		}
+	},
+	"Fighter": {
+		"Diver": {},
+		"Juggernaut": {}
+	},
+	"Tank": {
+		"Vanguard": {},
+		"Warden": {}
+	},
+	"Controller": {
+		"Enchanter": {},
+		"Catcher": {}
+	},
+	"Mage": {
+		"Battle": {},
+		"Burst": {},
+		"Artillery": {}
+	},
+	"Marksman": {
+		"Assassin": {},
+		"Skirmisher": {},
+		"Enchanter": {},
+		"Catcher": {},
+		"Battle": {},
+		"Burst": {},
+		"Artillery": {},
+		"Pure": {},
+		"Artillery/Battle": {},
+		"Artillery/Catcher": {},
+		"Catcher/Enchanter": {}
+	},
+	"Specialist": {
+		"Assassin/Diver": {},
+		"Catcher/Assassin": {},
+		"Skirmisher/Marksman": {},
+		"Skirmisher/Battle": {},
+		"Skirmisher/Artillery": {},
+		"Assassin/Artillery": {},
+		"Battle/Marksman": {},
+		"Burst/Battle": {},
+		"Battle": {},
+		"Battle/Enchanter/Catcher": {},
+		"Marksman/Enchanter": {},
+		"Marksman/Vanguard": {},
+		"Warden/Juggernaut": {}
+	}
+}
