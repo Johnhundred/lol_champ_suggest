@@ -5,7 +5,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 use GraphAware\Neo4j\Client\ClientBuilder;
 
 $neo4j = ClientBuilder::create()
-    ->addConnection('default', 'http://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7474') // port is optional
+    ->addConnection('default', 'bolt://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7687') // port is optional
     ->build();
 
 $name = 'Endscape';
@@ -44,34 +44,34 @@ $neo4j->run($query,
 	'id' => $json->accountId
 ]);
 
-// Get player's matchlist (Most recent 100 by default)
-$res = $client->request('GET', 'https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/'.$json->accountId, [
-    'query' => 'api_key='.getenv('RIOT_API_TOKEN'),
-]);
+// // Get player's matchlist (Most recent 100 by default)
+// $res = $client->request('GET', 'https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/'.$json->accountId, [
+//     'query' => 'api_key='.getenv('RIOT_API_TOKEN'),
+// ]);
 
-$json = json_decode($res->getBody());
-// var_dump(array_keys(get_object_vars($json)));
-// var_dump(array_keys($json->matches));
-// var_dump(array_keys(get_object_vars($json->matches[0])));
-// echo $json->matches[0]->gameId .PHP_EOL;
+// $json = json_decode($res->getBody());
+// // var_dump(array_keys(get_object_vars($json)));
+// // var_dump(array_keys($json->matches));
+// // var_dump(array_keys(get_object_vars($json->matches[0])));
+// // echo $json->matches[0]->gameId .PHP_EOL;
 
-// Get match info about player's most recent match
-$res = $client->request('GET', 'https://euw1.api.riotgames.com/lol/match/v4/matches/'.$json->matches[0]->gameId, [
-    'query' => 'api_key='.getenv('RIOT_API_TOKEN'),
-]);
+// // Get match info about player's most recent match
+// $res = $client->request('GET', 'https://euw1.api.riotgames.com/lol/match/v4/matches/'.$json->matches[0]->gameId, [
+//     'query' => 'api_key='.getenv('RIOT_API_TOKEN'),
+// ]);
 
-$json = json_decode($res->getBody());
-// var_dump(array_keys(get_object_vars($json)));
-// var_dump($json->participants);
-// var_dump($json->participantIdentities);
+// $json = json_decode($res->getBody());
+// // var_dump(array_keys(get_object_vars($json)));
+// // var_dump($json->participants);
+// // var_dump($json->participantIdentities);
 
-foreach ($json->participantIdentities as $key => $value) {
-	var_dump($value->player->accountId);
-}
+// foreach ($json->participantIdentities as $key => $value) {
+// 	var_dump($value->player->accountId);
+// }
 
-$result = $neo4j->run('MATCH (n) RETURN COUNT(n) AS count');
-$record = $result->getRecord();
-var_dump($record->get('count'));
+// $result = $neo4j->run('MATCH (n) RETURN COUNT(n) AS count');
+// $record = $result->getRecord();
+// var_dump($record->get('count'));
 
 // Body:
 // {

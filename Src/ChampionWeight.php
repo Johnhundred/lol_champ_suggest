@@ -73,4 +73,42 @@ class ChampionWeight
 
 		return $combinedWeights;
 	}
+
+	public function getChampionSubclasses(): array
+	{
+		$classes = [];
+
+		foreach ($this->weightDataBySubclass as $className => $subclasses) {
+			$classes[] = $className;
+		}
+
+		return $classes;
+	}
+
+	public function calculatePlayerWeightForSubclass(string $className, object $playerWeights): int
+	{
+		$subclassWeights = $this->getWeights([$className], [1]);
+		$keys = get_object_vars($subclassWeights);
+
+		$subclassWeight = 0;
+		foreach ($keys as $key => $val) {
+			$player = $playerWeights->$key;
+			$subclass = $subclassWeights->$key;
+
+			$attrWeight = 3 * (5 - abs($player->Priority - $subclass->Priority));
+			$part = 5;
+			foreach (get_object_vars($player) as $keyName => $value) {
+				if ($keyName === 'Priority') {
+					continue;
+				}
+
+				$part -= 0.5 * abs($player->$keyName - $subclass->$keyName);
+			}
+
+			$attrWeight = ($attrWeight + $part) * $player->Priority;
+			$subclassWeight += $attrWeight;
+		}
+
+		return $subclassWeight;
+	}
 }
