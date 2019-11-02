@@ -1,103 +1,1162 @@
 {
-	"Slayer": {
-		"Assassin": {
-			"Damage": {
-				"Priority": 5,
-				"DPS": 0,
-				"Burst": 5
-			},
-			"Toughness": {
-				"Priority": 1,
-				"Mitigation": 2,
-				"Sustain": 3
-			},
-			"Crowd Control": {
-				"Priority": 2,
-				"Soft": 4,
-				"Hard": 1
-			},
-			"Mobility": {
-				"Priority": 5,
-				"Engage": 3,
-				"Reposition": 2
-			},
-			"Utility": {
-				"Priority": 1,
-				"Defensive": 2,
-				"Offensive": 3
-			},
-		},
-		"Skirmisher": {
-			"Damage": {
-				"Priority": 5,
-				"DPS": 3,
-				"Burst": 2
-			},
-			"Toughness": {
-				"Priority": 3,
-				"Mitigation": 2,
-				"Sustain": 3
-			},
-			"Crowd Control": {
-				"Priority": 2,
-				"Soft": 1,
-				"Hard": 4
-			},
-			"Mobility": {
-				"Priority": 5,
-				"Engage": 1,
-				"Reposition": 4
-			},
-			"Utility": {
-				"Priority": 1,
-				"Defensive": 2,
-				"Offensive": 3
-			},
-		}
+	"Akali": {
+		"id": 84,
+		"class": "Slayer",
+		"subclasses": ["Assassin"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
 	},
-	"Fighter": {
-		"Diver": {},
-		"Juggernaut": {}
+	"Evelynn": {
+		"id": 28,
+		"class": "Slayer",
+		"subclasses": ["Assassin", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
 	},
-	"Tank": {
-		"Vanguard": {},
-		"Warden": {}
+	"Fizz": {
+		"id": 105,
+		"class": "Slayer",
+		"subclasses": ["Assassin", "Skirmisher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
 	},
-	"Controller": {
-		"Enchanter": {},
-		"Catcher": {}
+	"Kassadin": {
+		"id": 38,
+		"class": "Slayer",
+		"subclasses": ["Assassin", "Burst"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
 	},
-	"Mage": {
-		"Battle": {},
-		"Burst": {},
-		"Artillery": {}
+	"Katarina": {
+		"id": 55,
+		"class": "Slayer",
+		"subclasses": ["Assassin", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
 	},
-	"Marksman": {
-		"Assassin": {},
-		"Skirmisher": {},
-		"Enchanter": {},
-		"Catcher": {},
-		"Battle": {},
-		"Burst": {},
-		"Artillery": {},
-		"Pure": {},
-		"Artillery/Battle": {},
-		"Artillery/Catcher": {},
-		"Catcher/Enchanter": {}
+	"Khazix": {
+		"id": 121,
+		"class": "Slayer",
+		"subclasses": ["Assassin", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
 	},
-	"Specialist": {
-		"Assassin/Diver": {},
-		"Catcher/Assassin": {},
-		"Skirmisher/Marksman": {},
-		"Skirmisher/Battle": {},
-		"Skirmisher/Artillery": {},
-		"Assassin/Artillery": {},
-		"Battle/Marksman": {},
-		"Burst/Battle": {},
-		"Battle": {},
-		"Battle/Enchanter/Catcher": {},
-		"Marksman/Enchanter": {},
-		"Marksman/Vanguard": {},
-		"Warden/Juggernaut": {}
+	"Shaco": {
+		"id": 35,
+		"class": "Slayer",
+		"subclasses": ["Assassin", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Talon": {
+		"id": 91,
+		"class": "Slayer",
+		"subclasses": ["Assassin", "Burst"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Zed": {
+		"id": 238,
+		"class": "Slayer",
+		"subclasses": ["Assassin", "Skirmisher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Ekko": {
+		"id": 245,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher", "Assassin"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Fiora": {
+		"id": 114,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher", "Juggernaut"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Irelia": {
+		"id": 39,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Jax": {
+		"id": 24,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Kled": {
+		"id": 240,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher", "Diver", "Juggernaut"],
+		"subclass_ratios": [0.8, 0.1, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"MasterYi": {
+		"id": 11,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Riven": {
+		"id": 92,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Tryndamere": {
+		"id": 23,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Yasuo": {
+		"id": 157,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Camille": {
+		"id": 164,
+		"class": "Fighter",
+		"subclasses": ["Diver", "Skirmisher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Diana": {
+		"id": 131,
+		"class": "Fighter",
+		"subclasses": ["Diver", "Assassin"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Hecarim": {
+		"id": 120,
+		"class": "Fighter",
+		"subclasses": ["Diver"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"JarvanIV": {
+		"id": 59,
+		"class": "Fighter",
+		"subclasses": ["Diver", "Vanguard"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"LeeSin": {
+		"id": 64,
+		"class": "Fighter",
+		"subclasses": ["Diver"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Nocturne": {
+		"id": 56,
+		"class": "Fighter",
+		"subclasses": ["Diver"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Pantheon": {
+		"id": 80,
+		"class": "Fighter",
+		"subclasses": ["Diver"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"RekSai": {
+		"id": 421,
+		"class": "Fighter",
+		"subclasses": ["Diver"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Renekton": {
+		"id": 58,
+		"class": "Fighter",
+		"subclasses": ["Diver", "Skirmisher"],
+		"subclass_ratios": [0.8, 0.2],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Rengar": {
+		"id": 107,
+		"class": "Fighter",
+		"subclasses": ["Diver", "Assassin"],
+		"subclass_ratios": [0.8, 0.2],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Vi": {
+		"id": 254,
+		"class": "Fighter",
+		"subclasses": ["Diver", "Vanguard"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Warwick": {
+		"id": 19,
+		"class": "Fighter",
+		"subclasses": ["Diver", "Juggernaut"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"MonkeyKing": {
+		"id": 62,
+		"class": "Fighter",
+		"subclasses": ["Diver", "Assassin"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"XinZhao": {
+		"id": 5,
+		"class": "Fighter",
+		"subclasses": ["Diver", "Juggernaut"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Aatrox": {
+		"id": 266,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Battle"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Darius": {
+		"id": 122,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Battle"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"DrMundo": {
+		"id": 36,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Garen": {
+		"id": 86,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Illaoi": {
+		"id": 420,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Skirmisher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Mordekaiser": {
+		"id": 82,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Battle"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Nasus": {
+		"id": 75,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Olaf": {
+		"id": 2,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Shyvana": {
+		"id": 102,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Skarner": {
+		"id": 72,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Diver", "Catcher"],
+		"subclass_ratios": [0.8, 0.1, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Trundle": {
+		"id": 48,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Warden"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Udyr": {
+		"id": 77,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Urgot": {
+		"id": 6,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Volibear": {
+		"id": 106,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Warden"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Yorick": {
+		"id": 83,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Skirmisher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Alistar": {
+		"id": 12,
+		"class": "Tank",
+		"subclasses": ["Vanguard"],
+		"subclass_ratios": [0.9],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Amumu": {
+		"id": 32,
+		"class": "Tank",
+		"subclasses": ["Vanguard"],
+		"subclass_ratios": [0.9],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Gragas": {
+		"id": 79,
+		"class": "Tank",
+		"subclasses": ["Vanguard"],
+		"subclass_ratios": [0.9],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Leona": {
+		"id": 89,
+		"class": "Tank",
+		"subclasses": ["Vanguard"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Malphite": {
+		"id": 54,
+		"class": "Tank",
+		"subclasses": ["Vanguard", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Maokai": {
+		"id": 57,
+		"class": "Tank",
+		"subclasses": ["Vanguard", "Warden"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Nautilus": {
+		"id": 111,
+		"class": "Tank",
+		"subclasses": ["Vanguard", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Ornn": {
+		"id": 516,
+		"class": "Tank",
+		"subclasses": ["Vanguard", "Warden"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Rammus": {
+		"id": 33,
+		"class": "Tank",
+		"subclasses": ["Vanguard"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Sejuani": {
+		"id": 113,
+		"class": "Tank",
+		"subclasses": ["Vanguard", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Sion": {
+		"id": 14,
+		"class": "Tank",
+		"subclasses": ["Vanguard", "Warden"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Zac": {
+		"id": 154,
+		"class": "Tank",
+		"subclasses": ["Vanguard", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Braum": {
+		"id": 201,
+		"class": "Tank",
+		"subclasses": ["Warden", "Enchanter"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Galio": {
+		"id": 3,
+		"class": "Tank",
+		"subclasses": ["Warden", "Vanguard", "Battle"],
+		"subclass_ratios": [0.8, 0.1, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Nunu": {
+		"id": 20,
+		"class": "Tank",
+		"subclasses": ["Warden", "Battle"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Poppy": {
+		"id": 78,
+		"class": "Tank",
+		"subclasses": ["Warden", "Vanguard"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Shen": {
+		"id": 98,
+		"class": "Tank",
+		"subclasses": ["Warden", "Juggernaut"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"TahmKench": {
+		"id": 223,
+		"class": "Tank",
+		"subclasses": ["Warden", "Juggernaut"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Taric": {
+		"id": 44,
+		"class": "Tank",
+		"subclasses": ["Warden", "Enchanter"],
+		"subclass_ratios": [0.8, 0.2],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Bard": {
+		"id": 432,
+		"class": "Controller",
+		"subclasses": ["Catcher"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Blitzcrank": {
+		"id": 53,
+		"class": "Controller",
+		"subclasses": ["Catcher"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Ivern": {
+		"id": 427,
+		"class": "Controller",
+		"subclasses": ["Catcher", "Enchanter"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Morgana": {
+		"id": 25,
+		"class": "Controller",
+		"subclasses": ["Catcher", "Burst", "Enchanter"],
+		"subclass_ratios": [0.6, 0.2, 0.2],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Neeko": {
+		"id": 518,
+		"class": "Controller",
+		"subclasses": ["Catcher", "Burst"],
+		"subclass_ratios": [0.7, 0.3],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Pyke": {
+		"id": 555,
+		"class": "Controller",
+		"subclasses": ["Catcher", "Assassin"],
+		"subclass_ratios": [0.7, 0.3],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Rakan": {
+		"id": 497,
+		"class": "Controller",
+		"subclasses": ["Catcher", "Vanguard"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Thresh": {
+		"id": 412,
+		"class": "Controller",
+		"subclasses": ["Catcher"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Zyra": {
+		"id": 143,
+		"class": "Controller",
+		"subclasses": ["Catcher", "Burst", "Artillery"],
+		"subclass_ratios": [0.8, 0.1, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Janna": {
+		"id": 40,
+		"class": "Controller",
+		"subclasses": ["Enchanter", "Warden"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Karma": {
+		"id": 43,
+		"class": "Controller",
+		"subclasses": ["Enchanter", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Lulu": {
+		"id": 117,
+		"class": "Controller",
+		"subclasses": ["Enchanter"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Nami": {
+		"id": 267,
+		"class": "Controller",
+		"subclasses": ["Enchanter"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Sona": {
+		"id": 37,
+		"class": "Controller",
+		"subclasses": ["Enchanter", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Soraka": {
+		"id": 16,
+		"class": "Controller",
+		"subclasses": ["Enchanter", "Warden"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Velkoz": {
+		"id": 161,
+		"class": "Mage",
+		"subclasses": ["Artillery"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Xerath": {
+		"id": 101,
+		"class": "Mage",
+		"subclasses": ["Artillery"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Ziggs": {
+		"id": 115,
+		"class": "Mage",
+		"subclasses": ["Artillery"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Ahri": {
+		"id": 103,
+		"class": "Mage",
+		"subclasses": ["Burst", "Assassin"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Annie": {
+		"id": 1,
+		"class": "Mage",
+		"subclasses": ["Burst", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Brand": {
+		"id": 63,
+		"class": "Mage",
+		"subclasses": ["Burst", "Battle"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Leblanc": {
+		"id": 7,
+		"class": "Mage",
+		"subclasses": ["Burst", "Assassin"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Lux": {
+		"id": 99,
+		"class": "Mage",
+		"subclasses": ["Burst", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Orianna": {
+		"id": 61,
+		"class": "Mage",
+		"subclasses": ["Burst", "Battle"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Syndra": {
+		"id": 134,
+		"class": "Mage",
+		"subclasses": ["Burst"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"TwistedFate": {
+		"id": 4,
+		"class": "Mage",
+		"subclasses": ["Burst", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Veigar": {
+		"id": 45,
+		"class": "Mage",
+		"subclasses": ["Burst"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Zoe": {
+		"id": 142,
+		"class": "Mage",
+		"subclasses": ["Burst"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Anivia": {
+		"id": 34,
+		"class": "Mage",
+		"subclasses": ["Battle", "Warden"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"AurelionSol": {
+		"id": 136,
+		"class": "Mage",
+		"subclasses": ["Battle"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Cassiopeia": {
+		"id": 69,
+		"class": "Mage",
+		"subclasses": ["Battle", "Marksman"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Karthus": {
+		"id": 30,
+		"class": "Mage",
+		"subclasses": ["Battle"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Malzahar": {
+		"id": 90,
+		"class": "Mage",
+		"subclasses": ["Battle", "Marksman"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Rumble": {
+		"id": 68,
+		"class": "Mage",
+		"subclasses": ["Battle", "Warden"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Ryze": {
+		"id": 13,
+		"class": "Mage",
+		"subclasses": ["Battle", "Marksman"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Swain": {
+		"id": 50,
+		"class": "Mage",
+		"subclasses": ["Battle", "Juggernaut"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Taliyah": {
+		"id": 163,
+		"class": "Mage",
+		"subclasses": ["Battle", "Burst"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Viktor": {
+		"id": 112,
+		"class": "Mage",
+		"subclasses": ["Battle", "Burst"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Vladimir": {
+		"id": 8,
+		"class": "Mage",
+		"subclasses": ["Battle", "Juggernaut"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Ashe": {
+		"id": 22,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Caitlyn": {
+		"id": 51,
+		"class": "Marksman",
+		"subclasses": ["Marksman"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Corki": {
+		"id": 42,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Artillery"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Draven": {
+		"id": 119,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Skirmisher"],
+		"subclass_ratios": [0.8, 0.2],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Ezreal": {
+		"id": 81,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Artillery"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Jhin": {
+		"id": 202,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Burst"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Jinx": {
+		"id": 222,
+		"class": "Marksman",
+		"subclasses": ["Marksman"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Kaisa": {
+		"id": 145,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Assassin", "Diver"],
+		"subclass_ratios": [0.8, 0.1, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Kalista": {
+		"id": 429,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Skirmisher", "Battle"],
+		"subclass_ratios": [0.8, 0.1, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Kindred": {
+		"id": 203,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Enchanter"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"KogMaw": {
+		"id": 96,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Artillery", "Battle"],
+		"subclass_ratios": [0.8, 0.1, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Lucian": {
+		"id": 236,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Skirmisher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"MissFortune": {
+		"id": 21,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Burst"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Sivir": {
+		"id": 15,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Enchanter"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Tristana": {
+		"id": 18,
+		"class": "Marksman",
+		"subclasses": ["Marksman"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Twitch": {
+		"id": 29,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Assassin"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Varus": {
+		"id": 110,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Catcher", "Artillery"],
+		"subclass_ratios": [0.8, 0.1, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Vayne": {
+		"id": 67,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Assassin", "Skirmisher"],
+		"subclass_ratios": [0.9, 0.1, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Xayah": {
+		"id": 498,
+		"class": "Marksman",
+		"subclasses": ["Marksman"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Azir": {
+		"id": 268,
+		"class": "Specialist",
+		"subclasses": ["Marksman", "Battle"],
+		"subclass_ratios": [0.6, 0.4],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Chogath": {
+		"id": 31,
+		"class": "Specialist",
+		"subclasses": ["Juggernaut", "Warden", "Catcher"],
+		"subclass_ratios": [0.4, 0.5, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Elise": {
+		"id": 60,
+		"class": "Specialist",
+		"subclasses": ["Diver", "Catcher", "Assassin"],
+		"subclass_ratios": [0.3, 0.4, 0.3],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Fiddlesticks": {
+		"id": 9,
+		"class": "Specialist",
+		"subclasses": ["Battle", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Gangplank": {
+		"id": 41,
+		"class": "Specialist",
+		"subclasses": ["Skirmisher", "Battle"],
+		"subclass_ratios": [0.5, 0.5],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Gnar": {
+		"id": 150,
+		"class": "Specialist",
+		"subclasses": ["Marksman", "Vanguard"],
+		"subclass_ratios": [0.4, 0.6],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Graves": {
+		"id": 104,
+		"class": "Specialist",
+		"subclasses": ["Marksman", "Skirmisher"],
+		"subclass_ratios": [0.7, 0.3],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Heimerdinger": {
+		"id": 74,
+		"class": "Specialist",
+		"subclasses": ["Battle", "Artillery"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Jayce": {
+		"id": 126,
+		"class": "Specialist",
+		"subclasses": ["Skirmisher", "Artillery"],
+		"subclass_ratios": [0.5, 0.5],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Kayle": {
+		"id": 10,
+		"class": "Specialist",
+		"subclasses": ["Enchanter", "Marksman"],
+		"subclass_ratios": [0.3, 0.7],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Kayn": {
+		"id": 141,
+		"class": "Specialist",
+		"subclasses": ["Assassin", "Diver"],
+		"subclass_ratios": [0.5, 0.5],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Kennen": {
+		"id": 85,
+		"class": "Specialist",
+		"subclasses": ["Marksman", "Battle"],
+		"subclass_ratios": [0.4, 0.6],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Lissandra": {
+		"id": 127,
+		"class": "Specialist",
+		"subclasses": ["Battle", "Burst"],
+		"subclass_ratios": [0.5, 0.5],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Nidalee": {
+		"id": 76,
+		"class": "Specialist",
+		"subclasses": ["Assassin", "Artillery"],
+		"subclass_ratios": [0.5, 0.5],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Quinn": {
+		"id": 133,
+		"class": "Specialist",
+		"subclasses": ["Marksman", "Skirmisher"],
+		"subclass_ratios": [0.7, 0.3],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Singed": {
+		"id": 27,
+		"class": "Specialist",
+		"subclasses": ["Juggernaut", "Warden"],
+		"subclass_ratios": [0.5, 0.5],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Teemo": {
+		"id": 17,
+		"class": "Specialist",
+		"subclasses": ["Marksman", "Battle"],
+		"subclass_ratios": [0.7, 0.3],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Zilean": {
+		"id": 26,
+		"class": "Specialist",
+		"subclasses": ["Catcher", "Enchanter", "Battle"],
+		"subclass_ratios": [0.2, 0.2, 0.6],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Sylas": {
+		"id": 517,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher", "Battle"],
+		"subclass_ratios": [0.8, 0.2],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Yuumi": {
+		"id": 350,
+		"class": "Controller",
+		"subclasses": ["Enchanter", "Catcher"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Qiyana": {
+		"id": 246,
+		"class": "Slayer",
+		"subclasses": ["Assassin", "Diver"],
+		"subclass_ratios": [0.9, 0.1],
+		"override_ratios": false,
+		"override": {}
 	}
 }

@@ -1,0 +1,339 @@
+{
+	"Slayer": {
+		"Assassin": {
+			"Damage": {
+				"Priority": 5,
+				"DPS": 0,
+				"Burst": 5
+			},
+			"Toughness": {
+				"Priority": 1,
+				"Mitigation": 2,
+				"Sustain": 3
+			},
+			"Crowd Control": {
+				"Priority": 2,
+				"Soft": 4,
+				"Hard": 1
+			},
+			"Mobility": {
+				"Priority": 5,
+				"Engage": 3,
+				"Reposition": 2
+			},
+			"Utility": {
+				"Priority": 1,
+				"Defensive": 2,
+				"Offensive": 3
+			}
+		},
+		"Skirmisher": {
+			"Damage": {
+				"Priority": 5,
+				"DPS": 3,
+				"Burst": 2
+			},
+			"Toughness": {
+				"Priority": 3,
+				"Mitigation": 2,
+				"Sustain": 3
+			},
+			"Crowd Control": {
+				"Priority": 2,
+				"Soft": 1,
+				"Hard": 4
+			},
+			"Mobility": {
+				"Priority": 5,
+				"Engage": 1,
+				"Reposition": 4
+			},
+			"Utility": {
+				"Priority": 1,
+				"Defensive": 2,
+				"Offensive": 3
+			}
+		}
+	},
+	"Fighter": {
+		"Diver": {
+			"Damage": {
+				"Priority": 3,
+				"DPS": 2,
+				"Burst": 3
+			},
+			"Toughness": {
+				"Priority": 4,
+				"Mitigation": 2,
+				"Sustain": 3
+			},
+			"Crowd Control": {
+				"Priority": 4,
+				"Soft": 1,
+				"Hard": 4
+			},
+			"Mobility": {
+				"Priority": 5,
+				"Engage": 4,
+				"Reposition": 1
+			},
+			"Utility": {
+				"Priority": 1,
+				"Defensive": 2,
+				"Offensive": 3
+			}
+		},
+		"Juggernaut": {
+			"Damage": {
+				"Priority": 4,
+				"DPS": 4,
+				"Burst": 1
+			},
+			"Toughness": {
+				"Priority": 5,
+				"Mitigation": 1,
+				"Sustain": 4
+			},
+			"Crowd Control": {
+				"Priority": 1,
+				"Soft": 3,
+				"Hard": 2
+			},
+			"Mobility": {
+				"Priority": 1,
+				"Engage": 1,
+				"Reposition": 4
+			},
+			"Utility": {
+				"Priority": 1,
+				"Defensive": 2,
+				"Offensive": 3
+			}
+		}
+	},
+	"Tank": {
+		"Vanguard": {
+			"Damage": {
+				"Priority": 2,
+				"DPS": 4,
+				"Burst": 1
+			},
+			"Toughness": {
+				"Priority": 5,
+				"Mitigation": 5,
+				"Sustain": 0
+			},
+			"Crowd Control": {
+				"Priority": 5,
+				"Soft": 1,
+				"Hard": 4
+			},
+			"Mobility": {
+				"Priority": 4,
+				"Engage": 5,
+				"Reposition": 0
+			},
+			"Utility": {
+				"Priority": 2,
+				"Defensive": 5,
+				"Offensive": 30
+			}
+		},
+		"Warden": {
+			"Damage": {
+				"Priority": 2,
+				"DPS": 4,
+				"Burst": 1
+			},
+			"Toughness": {
+				"Priority": 5,
+				"Mitigation": 4,
+				"Sustain": 1
+			},
+			"Crowd Control": {
+				"Priority": 5,
+				"Soft": 1,
+				"Hard": 4
+			},
+			"Mobility": {
+				"Priority": 3,
+				"Engage": 4,
+				"Reposition": 1
+			},
+			"Utility": {
+				"Priority": 4,
+				"Defensive": 4,
+				"Offensive": 1
+			}
+		}
+	},
+	"Controller": {
+		"Catcher": {
+			"Damage": {
+				"Priority": 3,
+				"DPS": 3,
+				"Burst": 2
+			},
+			"Toughness": {
+				"Priority": 2,
+				"Mitigation": 4,
+				"Sustain": 1
+			},
+			"Crowd Control": {
+				"Priority": 5,
+				"Soft": 1,
+				"Hard": 4
+			},
+			"Mobility": {
+				"Priority": 3,
+				"Engage": 4,
+				"Reposition": 1
+			},
+			"Utility": {
+				"Priority": 3,
+				"Defensive": 5,
+				"Offensive": 0
+			}
+		},
+		"Enchanter": {
+			"Damage": {
+				"Priority": 1,
+				"DPS": 2,
+				"Burst": 3
+			},
+			"Toughness": {
+				"Priority": 1,
+				"Mitigation": 2,
+				"Sustain": 3
+			},
+			"Crowd Control": {
+				"Priority": 4,
+				"Soft": 1,
+				"Hard": 4
+			},
+			"Mobility": {
+				"Priority": 1,
+				"Engage": 2,
+				"Reposition": 3
+			},
+			"Utility": {
+				"Priority": 5,
+				"Defensive": 3,
+				"Offensive": 2
+			}
+		}
+	},
+	"Mage": {
+		"Artillery": {
+			"Damage": {
+				"Priority": 5,
+				"DPS": 2,
+				"Burst": 3
+			},
+			"Toughness": {
+				"Priority": 1,
+				"Mitigation": 3,
+				"Sustain": 2
+			},
+			"Crowd Control": {
+				"Priority": 3,
+				"Soft": 2,
+				"Hard": 3
+			},
+			"Mobility": {
+				"Priority": 1,
+				"Engage": 2,
+				"Reposition": 3
+			},
+			"Utility": {
+				"Priority": 1,
+				"Defensive": 2,
+				"Offensive": 3
+			}
+		},
+		"Burst": {
+			"Damage": {
+				"Priority": 5,
+				"DPS": 1,
+				"Burst": 4
+			},
+			"Toughness": {
+				"Priority": 1,
+				"Mitigation": 3,
+				"Sustain": 2
+			},
+			"Crowd Control": {
+				"Priority": 4,
+				"Soft": 1,
+				"Hard": 4
+			},
+			"Mobility": {
+				"Priority": 2,
+				"Engage": 4,
+				"Reposition": 1
+			},
+			"Utility": {
+				"Priority": 1,
+				"Defensive": 4,
+				"Offensive": 1
+			}
+		},
+		"Battle": {
+			"Damage": {
+				"Priority": 5,
+				"DPS": 4,
+				"Burst": 1
+			},
+			"Toughness": {
+				"Priority": 3,
+				"Mitigation": 1,
+				"Sustain": 4
+			},
+			"Crowd Control": {
+				"Priority": 3,
+				"Soft": 2,
+				"Hard": 3
+			},
+			"Mobility": {
+				"Priority": 1,
+				"Engage": 1,
+				"Reposition": 4
+			},
+			"Utility": {
+				"Priority": 1,
+				"Defensive": 1,
+				"Offensive": 4
+			}
+		}
+	},
+	"Marksman": {
+		"Marksman": {
+			"Damage": {
+				"Priority": 5,
+				"DPS": 5,
+				"Burst": 0
+			},
+			"Toughness": {
+				"Priority": 1,
+				"Mitigation": 1,
+				"Sustain": 4
+			},
+			"Crowd Control": {
+				"Priority": 1,
+				"Soft": 3,
+				"Hard": 2
+			},
+			"Mobility": {
+				"Priority": 2,
+				"Engage": 1,
+				"Reposition": 4
+			},
+			"Utility": {
+				"Priority": 1,
+				"Defensive": 4,
+				"Offensive": 1
+			}
+		}
+	},
+	"Specialist": {}
+}
