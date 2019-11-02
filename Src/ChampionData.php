@@ -12,8 +12,12 @@ class ChampionData
 	private $typeData;
 	private $typeDataById;
 
-	function __construct(string $typePath)
+	function __construct(?string $typePath = null)
 	{
+		if (!$typePath) {
+			$typePath = __DIR__.'/../Static/champion_types.json';
+		}
+
 		$this->typeData = json_decode(file_get_contents($typePath));
 		$this->typeDataById = new \stdClass();
 		foreach ($this->typeData as $name => $data) {
@@ -53,7 +57,3 @@ class ChampionData
 		return $this->typeDataById->$championId;
 	}
 }
-
-$c = new ChampionData(__DIR__.'/../Static/champion_types.json');
-// var_dump($c->getChampionBaseDataByName('Akali'));
-var_dump($c->getChampionWeightsById(517));
