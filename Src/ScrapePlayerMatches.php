@@ -35,7 +35,8 @@ try {
 	$neo4j->run('MATCH (n:Player) WHERE n.riot_accountId = {rid} SET n.scraped = true', ['rid' => $accountId]);
 	sleep(1);
 
-	throw new Exception("Error fetching player matches, marking scraped and skipping: ".$accountId, 1);
+	echo "Error fetching player matches, marking scraped and skipping: ".$accountId . PHP_EOL;
+	throw $e;
 }
 
 $json = json_decode($res->getBody());
