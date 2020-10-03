@@ -979,7 +979,7 @@
 		"id": 67,
 		"class": "Marksman",
 		"subclasses": ["Marksman", "Assassin", "Skirmisher"],
-		"subclass_ratios": [0.9, 0.1, 0.1],
+		"subclass_ratios": [0.8, 0.1, 0.1],
 		"override_ratios": false,
 		"override": {}
 	},
@@ -1158,5 +1158,29 @@
 		"subclass_ratios": [0.9, 0.1],
 		"override_ratios": false,
 		"override": {}
-	}
+	},
+	"Lillia": {
+		"id": 876,
+		"class": "Specialist",
+		"subclasses": ["Catcher", "Battle", "Artillery"],
+		"subclass_ratios": [0.2, 0.7, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Yone": {
+		"id": 777,
+		"class": "Slayer",
+		"subclasses": ["Skirmisher"],
+		"subclass_ratios": [1],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Samira": {
+		"id": 360,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Assassin", "Skirmisher"],
+		"subclass_ratios": [0.6, 0.3, 0.1],
+		"override_ratios": false,
+		"override": {}
+	},
 }

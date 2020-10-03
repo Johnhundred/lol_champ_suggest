@@ -1,14 +1,16 @@
 <?php
-
 require_once __DIR__.'/../vendor/autoload.php';
 
 use GraphAware\Neo4j\Client\ClientBuilder;
 
+// Uncaught Http\Client\Common\Exception\ClientErrorException: Bad Content-Type header value: ''
+// https://stackoverflow.com/questions/62489760/neo4j-php-graphaware-415-unsupported-media-type
+
 $neo4j = ClientBuilder::create()
-    ->addConnection('default', 'bolt://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7687') // port is optional
+    ->addConnection('default', 'http://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7474')
     ->build();
 
-$name = 'Endscape';
+$name = 'Razorleaf';
 $client = new GuzzleHttp\Client();
 $res = $client->request('GET', 'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/'.$name, [
     'query' => 'api_key='.getenv('RIOT_API_TOKEN'),
