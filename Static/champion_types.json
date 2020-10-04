@@ -1178,8 +1178,8 @@
 	"Samira": {
 		"id": 360,
 		"class": "Marksman",
-		"subclasses": ["Marksman", "Assassin", "Skirmisher"],
-		"subclass_ratios": [0.6, 0.3, 0.1],
+		"subclasses": ["Marksman", "Skirmisher"],
+		"subclass_ratios": [0.9, 0.1],
 		"override_ratios": false,
 		"override": {}
 	},
@@ -1188,6 +1188,14 @@
 		"class": "Fighter",
 		"subclasses": ["Juggernaut", "Warden"],
 		"subclass_ratios": [0.8, 0.2],
+		"override_ratios": false,
+		"override": {}
+	},
+	"Senna": {
+		"id": 235,
+		"class": "Marksman",
+		"subclasses": ["Marksman", "Enchanter", "Catcher"],
+		"subclass_ratios": [0.8, 0.1, 0.1],
 		"override_ratios": false,
 		"override": {}
 	}
