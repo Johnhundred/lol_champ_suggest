@@ -184,10 +184,52 @@ class PlayerStatistics
 		}
 		return $score;
 	}
+
+	public function getPlayerRecommendedChampionsFromChampionNames(array $championNames, ?int $listLength = 10)
+	{
+		$result = [];
+		$cd = new ChampionData();
+		foreach ($championNames as $name) {
+			$championWeights = $cd->getChampionWeightsByName($name);
+			$recommendedClass = $this->getRecommendedClassesFromWeights($championWeights)[0];
+			$championNames = $cd->getChampionsWithSubclass($recommendedClass);
+
+			$championsByNameWithWeights = [];
+			foreach ($championNames as $name) {
+				$championsByNameWithWeights[$name] = $cd->getChampionWeightsByName($name);
+			}
+
+			$championsByNameWithScore = [];
+			foreach ($championsByNameWithWeights as $name => $weights) {
+				$championsByNameWithScore[$name] = $this->getChampionWeightDifferenceFromPlayerWeights($championWeights, $weights);
+			}
+
+			asort($championsByNameWithScore);
+			if (!array_key_exists($recommendedClass, $result)) {
+				$result[$recommendedClass] = array_slice($championsByNameWithScore, 0, $listLength);
+				continue;
+			}
+			$result[$recommendedClass] = array_merge($result[$recommendedClass], array_slice($championsByNameWithScore, 0, $listLength));
+		}
+		return $result;
+	}
+
+	public function getRecommendedClassesFromWeights(object $weights)
+	{
+		$recommendedClasses = $this->getRecommendedClasses($weights);
+
+		$result = [];
+		foreach ($recommendedClasses as $value) {
+			$result[] = $value[0];
+		}
+
+		return $result;
+	}
 }
 
 $c = new PlayerStatistics();
 // var_dump($c->getChampionBaseDataByName('Akali'));
 // var_dump($c->getPlayerRecommendedClasses('Razorleaf'));
 // var_dump($c->getAveragePlayerWeighting('Razorleaf'));
-var_dump($c->getPlayerRecommendedChampions('Razorleaf'));
+// var_dump($c->getPlayerRecommendedChampions('Razorleaf'));
+var_dump($c->getPlayerRecommendedChampionsFromChampionNames(['Urgot', 'Illaoi', 'Sett']));
