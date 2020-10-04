@@ -10,6 +10,8 @@ $neo4j = ClientBuilder::create()
     ->addConnection('default', 'http://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7474')
     ->build();
 
+$player = $neo4j->run('MATCH (n) DETACH DELETE n');
+
 $name = 'Razorleaf';
 $client = new GuzzleHttp\Client();
 $res = $client->request('GET', 'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/'.$name, [

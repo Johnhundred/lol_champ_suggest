@@ -25,7 +25,7 @@
 				"Priority": 1,
 				"Defensive": 2,
 				"Offensive": 3
-			},
+			}
 		},
 		"Skirmisher": {
 			"Damage": {
@@ -52,7 +52,7 @@
 				"Priority": 1,
 				"Defensive": 2,
 				"Offensive": 3
-			},
+			}
 		}
 	},
 	"Fighter": {
@@ -81,7 +81,7 @@
 				"Priority": 1,
 				"Defensive": 2,
 				"Offensive": 3
-			},
+			}
 		},
 		"Juggernaut": {
 			"Damage": {
@@ -108,7 +108,7 @@
 				"Priority": 1,
 				"Defensive": 2,
 				"Offensive": 3
-			},
+			}
 		}
 	},
 	"Tank": {
@@ -137,7 +137,7 @@
 				"Priority": 2,
 				"Defensive": 5,
 				"Offensive": 30
-			},
+			}
 		},
 		"Warden": {
 			"Damage": {
@@ -164,7 +164,7 @@
 				"Priority": 4,
 				"Defensive": 4,
 				"Offensive": 1
-			},
+			}
 		}
 	},
 	"Controller": {
@@ -193,7 +193,7 @@
 				"Priority": 3,
 				"Defensive": 5,
 				"Offensive": 0
-			},
+			}
 		},
 		"Enchanter": {
 			"Damage": {
@@ -220,7 +220,7 @@
 				"Priority": 5,
 				"Defensive": 3,
 				"Offensive": 2
-			},
+			}
 		}
 	},
 	"Mage": {
@@ -249,7 +249,7 @@
 				"Priority": 1,
 				"Defensive": 2,
 				"Offensive": 3
-			},
+			}
 		},
 		"Burst": {
 			"Damage": {
@@ -276,7 +276,7 @@
 				"Priority": 1,
 				"Defensive": 4,
 				"Offensive": 1
-			},
+			}
 		},
 		"Battle": {
 			"Damage": {
@@ -303,7 +303,7 @@
 				"Priority": 1,
 				"Defensive": 1,
 				"Offensive": 4
-			},
+			}
 		}
 	},
 	"Marksman": {
@@ -332,8 +332,8 @@
 				"Priority": 1,
 				"Defensive": 4,
 				"Offensive": 1
-			},
-		},
+			}
+		}
 	},
 	"Specialist": {}
 }

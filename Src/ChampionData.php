@@ -56,4 +56,17 @@ class ChampionData
 	{
 		return $this->typeDataById->$championId;
 	}
+
+	public function getChampionsWithSubclass(string $subclass)
+	{
+		$championNames = [];
+
+		foreach ($this->typeData as $name => $data) {
+			if (in_array($subclass, $data->subclasses)) {
+				$championNames[] = $name;
+			}
+		}
+
+		return $championNames;
+	}
 }

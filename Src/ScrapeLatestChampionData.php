@@ -5,7 +5,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 use GraphAware\Neo4j\Client\ClientBuilder;
 
 $neo4j = ClientBuilder::create()
-    ->addConnection('default', 'bolt://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7687') // port is optional
+    ->addConnection('default', 'http://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7474')
     ->build();
 
 $client = new GuzzleHttp\Client();

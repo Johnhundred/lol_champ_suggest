@@ -1183,4 +1183,12 @@
 		"override_ratios": false,
 		"override": {}
 	},
+	"Sett": {
+		"id": 875,
+		"class": "Fighter",
+		"subclasses": ["Juggernaut", "Warden"],
+		"subclass_ratios": [0.8, 0.2],
+		"override_ratios": false,
+		"override": {}
+	}
 }

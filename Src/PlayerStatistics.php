@@ -15,7 +15,7 @@ class PlayerStatistics
 	public function __construct()
 	{
 		$this->neo4j = ClientBuilder::create()
-		    ->addConnection('default', 'bolt://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7687') // port is optional
+    	->addConnection('default', 'http://'.getenv('NEO4J_USER').':'.getenv('NEO4J_PASSWORD').'@localhost:7474')
 		    ->build();
 	}
 
@@ -133,8 +133,61 @@ class PlayerStatistics
 		$cw = new ChampionWeight();
 		return $cw->calculatePlayerWeightForSubclass($className, $playerWeights);
 	}
+
+	public function getPlayerRecommendedChampions(string $playerName, ?int $listLength = 10)
+	{
+		$playerWeights = $this->getAveragePlayerWeighting($playerName);
+		$recommendedClass = $this->getPlayerRecommendedClasses($playerName)[0];
+
+		$cd = new ChampionData();
+		$championNames = $cd->getChampionsWithSubclass($recommendedClass);
+
+		$championsByNameWithWeights = [];
+		foreach ($championNames as $name) {
+			$championsByNameWithWeights[$name] = $cd->getChampionWeightsByName($name);
+		}
+
+		$championsByNameWithScore = [];
+		foreach ($championsByNameWithWeights as $name => $weights) {
+			$championsByNameWithScore[$name] = $this->getChampionWeightDifferenceFromPlayerWeights($playerWeights, $weights);
+		}
+
+		asort($championsByNameWithScore);
+		return array_slice($championsByNameWithScore, 0, $listLength);
+	}
+
+	private function getChampionWeightDifferenceFromPlayerWeights($playerWeights, $championWeights)
+	{
+		$score = 0;
+		foreach ($playerWeights as $category => $obj) {
+			$score += abs($obj->Priority - $championWeights->$category->Priority);
+			if (property_exists($obj, 'DPS') && property_exists($obj, 'Burst')) {
+				$score += abs($obj->DPS - $championWeights->$category->DPS);
+				$score += abs($obj->Burst - $championWeights->$category->Burst);
+			}
+			if (property_exists($obj, 'Mitigation') && property_exists($obj, 'Sustain')) {
+				$score += abs($obj->Mitigation - $championWeights->$category->Mitigation);
+				$score += abs($obj->Sustain - $championWeights->$category->Sustain);
+			}
+			if (property_exists($obj, 'Soft') && property_exists($obj, 'Hard')) {
+				$score += abs($obj->Soft - $championWeights->$category->Soft);
+				$score += abs($obj->Hard - $championWeights->$category->Hard);
+			}
+			if (property_exists($obj, 'Engage') && property_exists($obj, 'Reposition')) {
+				$score += abs($obj->Engage - $championWeights->$category->Engage);
+				$score += abs($obj->Reposition - $championWeights->$category->Reposition);
+			}
+			if (property_exists($obj, 'Defensive') && property_exists($obj, 'Offensive')) {
+				$score += abs($obj->Defensive - $championWeights->$category->Defensive);
+				$score += abs($obj->Offensive - $championWeights->$category->Offensive);
+			}
+		}
+		return $score;
+	}
 }
 
 $c = new PlayerStatistics();
 // var_dump($c->getChampionBaseDataByName('Akali'));
-var_dump($c->getPlayerRecommendedClasses('Endscape'));
+// var_dump($c->getPlayerRecommendedClasses('Razorleaf'));
+// var_dump($c->getAveragePlayerWeighting('Razorleaf'));
+var_dump($c->getPlayerRecommendedChampions('Razorleaf'));
